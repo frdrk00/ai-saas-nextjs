@@ -7,9 +7,9 @@ import * as z from 'zod'
 import { Download, ImageIcon } from 'lucide-react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
+import Image from 'next/image'
 
 import { amountOptions, formSchema, resolutionOptions } from './constants'
-import { cn } from '@/lib/utils'
 
 import { Form, FormControl, FormField, FormItem } from '@/components/ui/form'
 import {
@@ -19,13 +19,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
+import { Card, CardFooter } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import Heading from '@/components/heading'
 import Empty from '@/components/empty'
 import Loader from '@/components/loader'
-import { Card, CardFooter } from '@/components/ui/card'
-import Image from 'next/image'
 
 const ImagePage = () => {
   const router = useRouter()
